@@ -14,22 +14,22 @@
 
 可选地，它也可以包括[永久链接](#永久链接)，例如`<h2 id="foo"><a class="header-anchor" href="#foo">Foo</a></h2>`以及一堆其他变体！
 
-* [**使用方式**](#使用方式)
-* [用户友好的 URLs](#用户友好的 URLs)
-* [手动设置 `id` 属性](#手动设置 `id` 属性)
-* [兼容的目录插件](#兼容的目录插件)
-* [从 HTML 块中解析标题](#从 HTML 块中解析标题)
-* [浏览器示例](#浏览器示例)
-* [**永久链接**](#永久链接)
+* [**使用方式**](#usage)
+* [用户友好的 URLs](#user-friendly-urls)
+* [手动设置 `id` 属性](#manually-setting-the-id-attribute)
+* [兼容的目录插件](#compatible-table-of-contents-plugin)
+* [从 HTML 块中解析标题](#parsing-headings-from-html-blocks)
+* [浏览器示例](#browser-example)
+* [永久链接](#permalinks)
   * [Header link](#header-link)
   * [Link after header](#link-after-header)
   * [Link inside header](#link-inside-header)
   * [ARIA hidden](#aria-hidden)
   * [Custom permalink](#custom-permalink)
-* [调试](#调试)
-* [开发](#开发)
+* [调试](#debugging)
+* [开发](#development)
 
-## 使用方式
+<h2 id="usage">使用方式</h2>
 
 ```js
 const md = require('markdown-it')()
@@ -66,7 +66,7 @@ const md = require('markdown-it')()
 
 `callback` 是一个将在渲染`token` and  `info` 结束后被调用的函数。 `info`对象拥有`title` and `slug` 属性在 token 块中，`slug`将会用在identifier 中。 
 
-## 用户友好的 URLs
+<h2 id="user-friendly-urls">用户友好的 URLs</h2>
 
 自从 `v5.0.0` 版本, `markdown-it-anchor` 抛弃 `string` 为了保持他的核心功能的纯粹和安全。
 然而，寻求向后兼容的老用户可能需要旧的slugify：
@@ -86,18 +86,18 @@ const anchor = require('markdown-it-anchor', {
 })
 ```
 
-## 手动设置 `id` 属性
+<h2 id="manually-setting-the-id-attribute">手动设置 `id` 属性</h2>
 
-## 兼容的目录插件
+<h2 id="compatible-table-of-contents-plugin">兼容的目录插件</h2>
 
 找寻自动生成目录的方法?
 推荐使用[markdown-it-toc-done-right](https://www.npmjs.com/package/markdown-it-toc-done-right) 它是这个插件好伴侣
 
-## 从 HTML 块中解析标题
+<h2 id="parsing-headings-from-html-blocks">从 HTML 块中解析标题</h2>
 
-## 浏览器示例
+<h2 id="browser-example">浏览器示例</h2>
 
-## 永久链接
+<h2 id="permalinks">永久链接</h2>
 
 ### Header link
 
@@ -109,6 +109,6 @@ const anchor = require('markdown-it-anchor', {
 
 ### Custom permalink
 
-## 调试
+<h2 id="debugging">调试</h2>
 
-## 开发
+<h2 id="development">开发</h2>
