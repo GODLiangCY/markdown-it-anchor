@@ -5,7 +5,7 @@
 
 [markdown-it]: https://github.com/markdown-it/markdown-it
 
-English | [中文 (v7.0.1)](./README-zh_CN.md)
+English | [中文 (v8.6.7)](./README-zh_CN.md)
 
 ## Overview
 

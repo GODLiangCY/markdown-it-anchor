@@ -1,11 +1,33 @@
 # markdown-it-anchor [![npm version](http://img.shields.io/npm/v/markdown-it-anchor.svg?style=flat-square)](https://www.npmjs.org/package/markdown-it-anchor)
 
-> 中文版翻译基于 version 7.0.1
-> 为 [markdown-it] 设计的标题锚点生成.
+> 中文版翻译基于 version 8.6.7。
+> 一个 markdown-it 插件，将 `id` 属性添加到标题和可选的永久链接。
 
 [markdown-it]: https://github.com/markdown-it/markdown-it
 
 中文 | [English](./README.md)
+
+## 概述
+
+本插件将一个 `id` 属性添加到了标题中，例如将`## Foo`转换成
+`<h2 id="foo">Foo</h2>`。
+
+可选地，它也可以包括[永久链接](#永久链接)，例如`<h2 id="foo"><a class="header-anchor" href="#foo">Foo</a></h2>`以及一堆其他变体！
+
+* [**使用方式**](#使用方式)
+* [用户友好的 URLs](#用户友好的 URLs)
+* [手动设置 `id` 属性](#手动设置 `id` 属性)
+* [兼容的目录插件](#兼容的目录插件)
+* [从 HTML 块中解析标题](#从 HTML 块中解析标题)
+* [浏览器示例](#浏览器示例)
+* [**永久链接**](#永久链接)
+  * [Header link](#header-link)
+  * [Link after header](#link-after-header)
+  * [Link inside header](#link-inside-header)
+  * [ARIA hidden](#aria-hidden)
+  * [Custom permalink](#custom-permalink)
+* [调试](#调试)
+* [开发](#开发)
 
 ## 使用方式
 
@@ -64,30 +86,29 @@ const anchor = require('markdown-it-anchor', {
 })
 ```
 
-## 支持 Unicode
+## 手动设置 `id` 属性
 
-Unicode 是被默认为支持的.
-但是, 如果你想要一个更加漂亮的固定链接，比如链接中不存在 %xx，推荐你使用`uslug` :
-
-```sh
-$ npm i -S uslug
-```
-
-```js
-const uslug = require('uslug')
-const uslugify = s => uslug(s)
-
-const md = require('markdown-it')()
-const anchor = require('markdown-it-anchor', {
-	slugify: uslugify
-})
-```
-
-## 目录
+## 兼容的目录插件
 
 找寻自动生成目录的方法?
 推荐使用[markdown-it-toc-done-right](https://www.npmjs.com/package/markdown-it-toc-done-right) 它是这个插件好伴侣
 
-## 浏览器例子
+## 从 HTML 块中解析标题
 
-请看 `example.html`.
+## 浏览器示例
+
+## 永久链接
+
+### Header link
+
+### Link after header
+
+### Link inside header
+
+### ARIA hidden
+
+### Custom permalink
+
+## 调试
+
+## 开发
